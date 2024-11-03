@@ -1,0 +1,62 @@
+# General
+.DS_Store
+*~
+*.swp
+*.swo
+.env
+.env.*
+!.env.example
+
+# Editor/IDE
+.idea/
+#.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# Go
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+*.prof
+coverage.html
+
+# Vendor directory (if not using modules or if explicitly vendoring)
+vendor/
+
+# Go workspace file
+go.work
+go.work.sum
+
+# Debug files
+debug
+debug.test
+
+# Binary directory
+bin/
+dist/
+
+# Local development configurations
+*.local.yml
+*.local.yaml
+*.local.json
+*.local.toml
+
+# Go specific temp directories
+_obj
+_test
+_testmain.go
+*.o
+*.a
+
+# Cache directories
+.go-cache/
+*.cache

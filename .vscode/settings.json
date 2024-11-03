@@ -1,0 +1,25 @@
+{
+    "files.exclude": {
+        // glob pattern settings to exclude files and folders
+        // Explorer determines which files and folders to show or hide based on this setting. (true is hidden)
+        // Display the .git folder
+        "**/.git": false
+    },
+    "go.gopath": "", // 必要に応じて設定してください
+    "go.useLanguageServer": true,
+    "go.lintOnSave": "file",
+    "go.lintTool": "golangci-lint", // golangci-lintを推奨しますが、go vetなども選択可能
+    "go.formatTool": "gofmt", // フォーマッターとしてgofmtを使用
+    "[go]": {
+        "editor.formatOnSave": true, // 保存時に自動フォーマット
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit", // インポートの自動整列（"true"の代わりに"explicit"を使用）
+            "source.fixAll": "explicit" // リントやフォーマットに基づいた自動補正（"true"の代わりに"explicit"を使用）
+        }
+    },
+    "editor.defaultFormatter": "golang.go", // Go用のデフォルトフォーマッター
+    "editor.tabSize": 4, // タブサイズの指定
+    "files.eol": "\n", // 行末記号の統一
+    "go.testOnSave": true, // 保存時にテストを自動実行
+    "go.testFlags": ["-v"] // テストの詳細表示オプション
+}
