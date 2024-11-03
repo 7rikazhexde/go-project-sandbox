@@ -1,4 +1,8 @@
 # .github/workflows/go_test.yml
+# CI (Continuous Integration) workflow for Go projects
+# This workflow runs tests on multiple OS and Go versions to ensure cross-platform compatibility
+# It executes on every push to main and all pull requests
+
 name: Go CI
 
 on:
@@ -25,6 +29,12 @@ jobs:
         uses: actions/setup-go@v5.1.0
         with:
           go-version: ${{ matrix.go-version }}
+          # Cache is disabled because:
+          # 1. Currently no external package dependencies
+          # 2. No go.sum file exists
+          # 3. To avoid warning messages in the workflow
+          # Note: Can be enabled when external dependencies are added in the future
+          cache: false
 
       - name: Display Go version
         run: go version
