@@ -14,7 +14,9 @@ func TestParseConfig(t *testing.T) {
 		t.Fatal("Error getting current file path")
 	}
 
-	configPath := filepath.Join(filepath.Dir(filename), "../../../.github/workflows/go_project_matrix.json")
+	// jsonparserディレクトリの親（プロジェクトルート）を取得してからJSONファイルのパスを組み立て
+	projectRoot := filepath.Join(filepath.Dir(filename), "..")
+	configPath := filepath.Join(projectRoot, ".github/workflows/go_project_matrix.json")
 
 	tests := []struct {
 		name    string

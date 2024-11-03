@@ -23,11 +23,7 @@ An experimental go project to test out various tools.
 
 ```bash
 # Clone the repository with submodules
-git clone --recursive <repository-url>
-cd json2vars-setter/examples/go
-
-# Or if you already cloned the repository
-git submodule update --init --recursive
+git clone https://github.com/7rikazhexde/go-project-sandbox.git
 
 # Install specific Go version using gomvm
 cd gomvm/scripts/ubuntu
